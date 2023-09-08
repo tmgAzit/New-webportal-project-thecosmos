@@ -1,4 +1,5 @@
 import P1 from '../../images/P1.jpeg';
+import { Link, Outlet } from 'react-router-dom';
 function FamilyDetails() {
   return (
     <>
@@ -37,6 +38,10 @@ function FamilyDetails() {
             </table>
           </div>
         </div>
+
+        <Link to='/profile/addmember' className='link'>
+          add member
+        </Link>
       </section>
     </>
   );

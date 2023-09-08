@@ -1,4 +1,4 @@
-import feed1 from '../images/F1.jpeg';
+import feed1 from '../../images/F1.jpeg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faComment } from '@fortawesome/free-solid-svg-icons';
 function Feed() {

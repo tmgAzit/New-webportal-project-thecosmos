@@ -1,24 +1,27 @@
-import logo from '../images/logo.jpeg';
+import logo from '../images/logo.svg';
+import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <>
       <section className='main navbar-container'>
         <div className='logo'>
-          <img src={logo} alt='logo' />
+          <Link>
+            <img src={logo} alt='logo' />
+          </Link>
         </div>
         <div className='navbar-links'>
           <ul>
             <li>
-              <a href='#'>Profile</a>
+              <Link to='/profile'>profile</Link>
             </li>
             <li>
-              <a href='#'>Calender</a>
+              <Link to='/calendar'>calendar</Link>
             </li>
             <li>
-              <a href='#'>Medication</a>
+              <Link to='/medication'>medication</Link>
             </li>
             <li>
-              <a href='#'>Notification</a>
+              <Link to='/notification'>notification</Link>
             </li>
           </ul>
         </div>

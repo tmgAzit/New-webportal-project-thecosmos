@@ -1,24 +1,58 @@
 import './index.css';
-// import Login from './components/Login';
-import Feed from './components/Feed';
-import NavBar from './components/Navbar';
-import Login from './components/Login';
-import Status from './components/Status';
-import Profile from './components/Profile/index.jsx';
-import Medication from './components/Medication';
-import Notification from './components/Notification';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+
+import {
+  HomeLayout,
+  Dashboard,
+  AddMember,
+  Profile,
+  Calendar,
+  Medication,
+  Notification,
+} from './components/index';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <HomeLayout />,
+    children: [
+      { index: true, element: <Dashboard /> },
+      {
+        path: 'profile',
+        element: <Profile />,
+        children: [
+          {
+            path: 'addmember',
+            element: <AddMember />,
+          },
+        ],
+      },
+      {
+        path: 'calendar',
+        element: <Calendar />,
+      },
+      { path: 'medication', element: <Medication /> },
+      {
+        path: 'notification',
+        element: <Notification />,
+      },
+    ],
+  },
+]);
+
 function App() {
   return (
     <>
-      <Login />
-      {/* <NavBar /> */}
-      {/* <Status />
-      <Feed /> */}
-      {/* <Profile /> */}
-      {/* <Medication />
-      <Notification /> */}
+      <RouterProvider router={router}></RouterProvider>
     </>
   );
 }
 
 export default App;
+//  {/* <Login /> */}
+//     {/* <Status />
+//     <Feed /> */}
+//     {/* <Profile /> */}
+//     {/* <Calendar /> */}
+//     <Medication />
+//     {/* <Notification /> */}

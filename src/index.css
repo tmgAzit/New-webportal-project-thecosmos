@@ -205,7 +205,7 @@ Login
   display: flex;
   flex-direction: column;
   justify-content: column;
-  align-items: center;
+  align-items: start;
 }
 
 .loginBtn {
@@ -233,7 +233,7 @@ Navbar
 }
 .logo {
   max-height: 20%;
-  max-width: 10%;
+  max-width: 12.5%;
 }
 img {
   object-fit: fill;
@@ -318,6 +318,10 @@ Profile
   flex-wrap: nowrap;
 }
 
+.link {
+  padding: 1rem;
+}
+
 .child-photo,
 .family-photo {
   padding: 0.5rem;
@@ -334,7 +338,77 @@ Profile
   padding: 0.5rem;
 }
 
-.profile-title {
+.profile-title,
+.calendar-title {
   padding: 0.5rem;
+  background-color: var(--clr-primary-7);
+}
+
+/* Calendar */
+
+.css-u0soqy-MuiPickerStaticWrapper-root {
+  box-shadow: 3px 2px 10px 5px #888888 !important;
+}
+
+.css-hlj6pa-MuiDialogActions-root {
+  display: none !important;
+}
+
+.css-j88s13-MuiPickersToolbar-root-MuiDatePickerToolbar-root
+  .MuiPickersToolbar-penIconButton {
+  display: none !important;
+}
+
+.css-j88s13-MuiPickersToolbar-root-MuiDatePickerToolbar-root {
+  padding: 0 !important;
+}
+
+.css-hq2kpw-MuiGrid-root-MuiPickersToolbar-content {
+  justify-content: center !important;
+  background-color: orange;
+  padding: 1rem;
+}
+
+.css-1hbyad5-MuiTypography-root {
+  display: none !important;
+}
+
+.css-bkrceb-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+  background-color: orange !important;
+}
+
+.css-195y93z-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+  background-color: orange !important;
+  color: black !important;
+}
+.css-195y93z-MuiButtonBase-root-MuiPickersDay-root:not(.Mui-selected) {
+  border-color: transparent !important;
+  color: orange;
+}
+
+.css-144dnr3-MuiBadge-badge {
+  color: green;
+}
+
+.css-1n2mv2k {
+  background-color: #f4f4f4;
+  margin-bottom: 1rem;
+}
+
+.forAttention a,
+input {
+  padding: 0.4rem;
+  margin: 0.1rem;
+}
+
+.medical {
+  margin-top: 1rem;
+  margin-bottom: 0.8em;
+  background-color: var();
+}
+
+/* Medication */
+.medical-title {
+  padding: 1rem;
   background-color: var(--clr-primary-7);
 }
