@@ -1,5 +1,4 @@
-import CheckCalendar from './CheckCalender';
-import MarkCalendar from './MarkCalendar';
+import { CheckCalendar, MarkCalendar } from './Calendar/index';
 
 function Calendar() {
   return (

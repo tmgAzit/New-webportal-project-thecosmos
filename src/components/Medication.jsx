@@ -16,7 +16,7 @@ function Medication() {
             rows='4'
             placeholder='Instructions....'
           ></textarea>
-          <button type='submit' className='btn'>
+          <button type='submit' className='btn medUsage-btn'>
             submit
           </button>
         </form>

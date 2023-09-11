@@ -1,5 +1,4 @@
-import Status from './Status';
-import Feed from './Feed';
+import { Feed, Status } from './Dashboard/index';
 
 function Dashboard() {
   return (

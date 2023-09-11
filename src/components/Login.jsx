@@ -1,50 +1,37 @@
-import logo from '../images/logo.jpeg';
+import logo from '../images/logo.svg';
 import heroImage from '../images/Hero image.jpeg';
+import { FormInput, SubmitForm } from './FormInput';
+import { Form } from 'react-router-dom';
 function Login() {
   return (
     <>
-      <div className='logo'>
-        <img src={logo} alt='logo' />
-      </div>
-      <div className='section-center'>
-        <form action='/' method='post'>
+      <section className='main section-center'>
+        <div className='login-logo '>
+          <img src={logo} alt='login logo' />
+        </div>
+        <Form className='form-container'>
+          <h4>
+            <em>Login</em>
+          </h4>
           <div className='hero-image'>
             <img src={heroImage} alt='daycare hero photo' />
           </div>
-          <div className='login-container'>
-            <label htmlFor='username'>
-              <br /> Username <br />
-            </label>
-            <input
-              type='text'
-              placeholder='Enter username'
-              name='username'
-              required
-            />
-            <label htmlFor='password'>
-              <br />
-              Password <br />
-            </label>
-            <input
-              type='text'
-              placeholder='Enter password'
-              name='password'
-              required
-            />
-            <label>
-              <input type='checkbox' name='remember' /> Remember me <br />
-            </label>
-            <button className='btn loginBtn' type='submit'>
-              login
-            </button>
-          </div>
-          <div className='container'>
-            <span className='psw'>
-              <a href='#'>forgot password?</a>
-            </span>
-          </div>
-        </form>
-      </div>
+
+          <FormInput
+            type='email'
+            label='username'
+            name='identifier'
+            defaultValue='test@test.com'
+          />
+          <FormInput
+            type='password'
+            label='password'
+            name='password'
+            defaultValue='secret'
+          />
+          <SubmitForm text='login' />
+        </Form>
+      </section>
     </>
   );
 }

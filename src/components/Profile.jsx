@@ -1,7 +1,5 @@
-import ChildProfile from './ChildProfile';
-import FamilyDetails from './FamilyDetails';
+import { ChildProfile, FamilyDetails } from './Profile/index';
 import { Outlet } from 'react-router-dom';
-
 function Profile() {
   return (
     <>
