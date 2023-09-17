@@ -1,10 +1,10 @@
-import { ChildProfile, FamilyDetails } from './Profile/index';
+import { Student, Educator } from './Profile/index';
 import { Outlet } from 'react-router-dom';
 function Profile() {
   return (
     <>
-      <ChildProfile />
-      <FamilyDetails />
+      <Educator />
+      {/* <Student /> */}
       <Outlet />
     </>
   );

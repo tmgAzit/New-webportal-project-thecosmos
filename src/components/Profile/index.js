@@ -1,6 +1,2 @@
-import ChildProfile from './ChildProfile';
-import FamilyDetails from './FamilyDetails';
-import { Outlet } from 'react-router-dom';
-
-export { default as ChildProfile } from './ChildProfile';
-export { default as FamilyDetails } from './FamilyDetails';
+export { default as Educator } from './Educator';
+export { default as Student } from './Student';

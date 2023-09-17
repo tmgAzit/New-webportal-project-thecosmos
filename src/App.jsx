@@ -6,6 +6,7 @@ import {
   HomeLayout,
   Dashboard,
   AddMember,
+  Student,
   Profile,
   Calendar,
   Medication,
@@ -27,7 +28,15 @@ const router = createBrowserRouter([
         children: [
           {
             path: 'addmember',
-            element: <AddMember />,
+            element: <AddMember text='member' />,
+          },
+          {
+            path: 'moreInfo',
+            element: <Student />,
+          },
+          {
+            path: 'addchildren',
+            element: <AddMember text='children' />,
           },
         ],
       },
@@ -63,10 +72,3 @@ function App() {
 }
 
 export default App;
-//  {/* <Login /> */}
-//     {/* <Status />
-//     <Feed /> */}
-//     {/* <Profile /> */}
-//     {/* <Calendar /> */}
-//     <Medication />
-//     {/* <Notification /> */}

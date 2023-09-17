@@ -1,21 +1,27 @@
-function AddMember() {
+import { FormInput } from '../../FormInput/index';
+function AddMember({ text }) {
   return (
     <>
       <section className='section-center'>
-        <h3 className='profile-title'>create/add member</h3>
-        <em>member details</em>
+        <h3 className='profile-title'>create/add {text}</h3>
+        <em>{text} details</em>
         <form className='form-container' action='/newMember'>
-          <label htmlFor='firstName'>first name</label>
-          <input type='text' required />
-          <label htmlFor='lasttName'>last name</label>
-          <input type='text' required />
-          <label htmlFor=''>Age</label>
-          <input type='number' required />
-          <label htmlFor='relation'>Relation</label>
-          <input type='text' required />
-          <label htmlFor='contact'>contact number</label>
-          <input type='integer' required />
-          <button type='submit' className='btn'>
+          <FormInput
+            type='text'
+            label='first Name'
+            name='identifier'
+            required
+          />
+          <FormInput type='text' label='last name' name='identifier' required />
+          <FormInput type='text' label='Relation' name='identifier' required />
+          <FormInput type='float' label='age' name='identifier' required />
+          <FormInput
+            type='integer'
+            label='contact'
+            name='identifier'
+            required
+          />
+          <button type='submit' className='add-btn btn'>
             Create
           </button>
         </form>

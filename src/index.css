@@ -177,10 +177,11 @@ form {
 .section-center {
   width: 90vw;
   margin: 0 auto;
-  max-width: 35rem;
+  max-width: 45rem;
   margin-top: 4rem;
   background-color: var(--clr-grey-9);
 }
+
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
@@ -239,6 +240,42 @@ Login
     max-width: 120px;
   }
 }
+
+/*
+ //////////////////////
+  header 
+ ////////////////////
+*/
+
+.header {
+  padding: 2px;
+}
+
+.header-content {
+  position: relative;
+  display: flex;
+  padding: 6px;
+  justify-content: end;
+  place-items: center;
+}
+
+.welcome {
+  padding: 0 0.5rem;
+  align-self: last baseline;
+}
+@media screen and (min-width: 992px) {
+  .header {
+    padding: 1px;
+  }
+  .header-content {
+    padding: 3px;
+  }
+  .welcome {
+    padding: 0 0.2rem;
+    font-size: 1rem;
+  }
+}
+
 /*
 =============== 
 Navbar
@@ -259,7 +296,7 @@ Navbar
 .logo img {
   object-fit: cover;
 }
-.navbar-links ul {
+.navbar-links {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -268,6 +305,26 @@ Navbar
 
 li {
   padding: 2rem 1rem;
+  list-style-type: none;
+}
+
+.navlink {
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--clr-black);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  /* border: 2px solid var(--clr-black); */
+  cursor: pointer;
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); */
+  /* border-radius: var(--radius); */
+}
+.navlink:hover {
+  color: var(--clr-black);
+  background: var(--clr-white);
 }
 
 @media screen and (min-width: 992px) {
@@ -345,6 +402,8 @@ Profile
 }
 
 .link {
+  display: inline-block;
+
   padding: 1rem;
 }
 
@@ -368,6 +427,42 @@ Profile
 .calendar-title {
   padding: 0.5rem;
   background-color: var(--clr-primary-7);
+}
+
+.add-btn {
+  margin-top: 1rem;
+}
+
+/* 
+==============
+Educator
+==============
+*/
+.students {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: fle;
+}
+
+.img-container {
+  margin: 0.5rem 1rem;
+  max-width: 50px;
+}
+
+.student-info {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: row;
+  justify-content: space-between;
+  place-items: center;
+  flex-grow: 1;
+}
+.moreInfo {
+  margin-right: 1rem;
+  padding-bottom: 1rem;
 }
 
 /* Calendar */
@@ -421,16 +516,26 @@ Profile
   margin-bottom: 1rem;
 }
 
-.forAttention a,
-input {
-  padding: 0.4rem;
-  margin: 0.1rem;
+.forAttention {
+  padding: 1rem;
+}
+
+.form-container input {
+  margin-top: 0.5rem;
+  padding: 1rem;
 }
 
 .medical {
   margin-top: 1rem;
+  padding: 1rem;
   margin-bottom: 0.8em;
-  background-color: var();
+  color: var(--clr-white);
+  background-color: var(--clr-black);
+}
+
+.cannot-attend {
+  margin-bottom: 1rem;
+  display: inline-block;
 }
 
 /* Medication */

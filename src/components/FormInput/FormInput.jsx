@@ -9,7 +9,7 @@ const FormInput = ({ label, name, type, defaultValue }) => {
           type={type}
           name={name}
           defaultValue={defaultValue}
-          placeholder='type here'
+          placeholder=''
           required
         />
       </div>

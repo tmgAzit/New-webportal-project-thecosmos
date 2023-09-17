@@ -1,42 +1,61 @@
-import profilePhoto from '../../images/child1.jpeg';
+import aadhya from '../../images/child1.jpeg';
+
+const students = [
+  {
+    id: 1,
+    image: aadhya,
+    name: 'Aadhya Silwal',
+    age: 4.8,
+    sex: 'Female',
+    address: '11 Joy Street Ascot Park 5403 SA',
+    parents: 'Saroj Silwal',
+    contact: '041238765',
+  },
+];
 function ChildProfile() {
   return (
     <>
       <section className='section-center '>
         <h3 className='profile-title'>Profile</h3>
-        <div className='container'>
-          <div className='child-photo'>
-            <img src={profilePhoto} alt="child's photo" />
-          </div>
-          <div className='child-details'>
-            <table>
-              <tr>
-                <th>Name</th>
-                <td>Aadhya silwal</td>
-              </tr>
-              <tr>
-                <th>Age</th>
-                <td>4y 8months</td>
-              </tr>
-              <tr>
-                <th>Sex</th>
-                <td>Female</td>
-              </tr>
-              <tr>
-                <th>Address</th>
-                <td>11 joy street ascot park 5403 SA</td>
-              </tr>
-              <tr>
-                <th>Parents</th>
-                <td>Saroj silwal</td>
-              </tr>
-              <tr>
-                <th>contact:</th>
-                <td>0481238765</td>
-              </tr>
-            </table>
-          </div>
-        </div>
+        {students.map((student) => {
+          const { id, image, name, age, sex, address, parents, contact } =
+            student;
+          return (
+            <div className='container' key={id}>
+              <div className='child-photo'>
+                <img src={image} alt="child's photo" />
+              </div>
+              <div className='child-details'>
+                <table>
+                  <tr>
+                    <th>Name</th>
+                    <td>{name}</td>
+                  </tr>
+                  <tr>
+                    <th>Age</th>
+                    <td>{age} years</td>
+                  </tr>
+                  <tr>
+                    <th>Sex</th>
+                    <td>{sex}</td>
+                  </tr>
+                  <tr>
+                    <th>Address</th>
+                    <td>{address}</td>
+                  </tr>
+                  <tr>
+                    <th>Parents</th>
+                    <td>{parents}</td>
+                  </tr>
+                  <tr>
+                    <th>contact:</th>
+                    <td>{contact}</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          );
+        })}
       </section>
     </>
   );

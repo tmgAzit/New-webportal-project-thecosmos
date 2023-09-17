@@ -8,9 +8,9 @@ const SubmitForm = () => {
       <p className='psw'>
         <Link to='/password'>forgot password?</Link>
       </p>
-      <p className='psw'>
+      {/* <p className='psw'>
         not a member? <Link to='/register'>register</Link>
-      </p>
+      </p> */}
     </div>
   );
 };

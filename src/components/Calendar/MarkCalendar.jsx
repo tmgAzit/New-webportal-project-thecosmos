@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 function MarkCalendar() {
   return (
     <section className='section-center'>
+      <h3 className='calendar-title'>For Attention</h3>
       <div className='forAttention'>
-        <h3 className='calendar-title'>For Attention</h3>
-        <label>
+        <label className='cannot-attend'>
           <input type='checkbox' name='absent' /> Cannot Attend
           <br />
         </label>
@@ -21,7 +21,7 @@ function MarkCalendar() {
           </button>
         </form>
         <Link to='/medication'>
-          <h4 className='medical btn'> medical attention?</h4>
+          <h4 className='medical '> for medical attention request</h4>
         </Link>
       </div>
     </section>
