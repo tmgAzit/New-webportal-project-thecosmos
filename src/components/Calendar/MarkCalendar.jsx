@@ -9,7 +9,7 @@ function MarkCalendar() {
           <br />
         </label>
 
-        <form className='form-container' action='/'>
+        <form className='form-container form-background' action='/'>
           <h4>
             <label htmlFor='reason'>Reasons of absent:</label>
           </h4>

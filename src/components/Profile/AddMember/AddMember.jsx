@@ -4,8 +4,8 @@ function AddMember({ text }) {
     <>
       <section className='section-center'>
         <h3 className='profile-title'>create/add {text}</h3>
-        <em>{text} details</em>
-        <form className='form-container' action='/newMember'>
+        <em className='input-padding'>{text} details</em>
+        <form className='form-container form-background' action='/newMember'>
           <FormInput
             type='text'
             label='first Name'

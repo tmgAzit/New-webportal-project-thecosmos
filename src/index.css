@@ -228,7 +228,7 @@ Login
 }
 
 .hero-image img {
-  width: 33em;
+  width: 42em;
 }
 
 .login-logo {
@@ -539,9 +539,14 @@ Educator
 }
 
 /* Medication */
-.medical-title {
+.form-background {
   padding: 1rem;
-  background-color: var(--clr-primary-7);
+  background-color: var(--clr-grey-9);
+}
+
+.input-padding {
+  display: inline-block;
+  padding: 1rem;
 }
 
 .medUsage-btn {

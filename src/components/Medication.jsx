@@ -2,9 +2,9 @@ function Medication() {
   return (
     <>
       <section className='section-center'>
-        <h3 className='medical-title'>Medical History</h3>
-        <input type='file' />
-        <form className='form-container medication-details'>
+        <h3 className='profile-title'>Medical History</h3>
+        <input className='input-padding' type='file' />
+        <form className='form-container form-background'>
           <em>for more directions!</em>
           <h3>Medicine usage</h3>
           <label htmlFor='useMedicine'>Medicine Name</label>

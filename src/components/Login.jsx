@@ -1,8 +1,25 @@
+import { useEffect, useState } from 'react';
 import logo from '../images/logo.svg';
 import heroImage from '../images/Hero image.jpeg';
 import { FormInput, SubmitForm } from './FormInput';
 import { Form } from 'react-router-dom';
 function Login() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [user, setUser] = useState('');
+
+  const handleSubmit = (e) => {
+    console.log(() => {
+      e.target.value();
+    });
+    setUsername();
+    setPassword();
+  };
+
+  useEffect(() => {
+    setUser();
+  }, []);
+
   return (
     <>
       <section className='main section-center'>
@@ -22,14 +39,16 @@ function Login() {
             label='username'
             name='identifier'
             defaultValue='test@test.com'
+            onChange={handleSubmit}
           />
           <FormInput
             type='password'
             label='password'
             name='password'
             defaultValue='secret'
+            onChange={handleSubmit}
           />
-          <SubmitForm text='login' />
+          <SubmitForm text='login' onClick={() => alert('logged in!')} />
         </Form>
       </section>
     </>
