@@ -1,24 +1,27 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import logo from '../images/logo.svg';
-import heroImage from '../images/Hero image.jpeg';
+import heroImage from '../images/Hero Image.jpeg';
 import { FormInput, SubmitForm } from './FormInput';
 import { Form } from 'react-router-dom';
+import { data } from './data';
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [user, setUser] = useState('');
+  const [users, setUsers] = useState(data);
 
   const handleSubmit = (e) => {
-    console.log(() => {
-      e.target.value();
-    });
-    setUsername();
-    setPassword();
+    e.preventDefault();
+    // do something
+    if (!username || !password) return;
+    const randomId = Date.now();
+    // console.log(randomId);
+    const newUser = { id: randomId, username: username, password: password };
+    console.log(newUser);
+    const newUsers = [...users, newUser];
+    setUsers(newUsers);
+    setUsername('');
+    setPassword('');
   };
-
-  useEffect(() => {
-    setUser();
-  }, []);
 
   return (
     <>
@@ -26,7 +29,7 @@ function Login() {
         <div className='login-logo '>
           <img src={logo} alt='login logo' />
         </div>
-        <Form className='form-container'>
+        <Form className='form-container' onSubmit={handleSubmit}>
           <h4>
             <em>Login</em>
           </h4>
@@ -37,19 +40,31 @@ function Login() {
           <FormInput
             type='email'
             label='username'
-            name='identifier'
-            defaultValue='test@test.com'
-            onChange={handleSubmit}
+            name='usernmae'
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
           <FormInput
             type='password'
             label='password'
             name='password'
-            defaultValue='secret'
-            onChange={handleSubmit}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
-          <SubmitForm text='login' onClick={() => alert('logged in!')} />
+          <SubmitForm text='login' />
         </Form>
+
+        {/* render users */}
+        <h4>Users</h4>
+        {users.map((user) => {
+          const { id, username, password } = user;
+          return (
+            <div key={id}>
+              <h4>{username}</h4>
+              <i>{password}</i>
+            </div>
+          );
+        })}
       </section>
     </>
   );

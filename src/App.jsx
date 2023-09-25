@@ -1,6 +1,8 @@
 import './index.css';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-
+import { memberDetails, students } from './components/data.js';
 import {
   Login,
   HomeLayout,
@@ -28,7 +30,7 @@ const router = createBrowserRouter([
         children: [
           {
             path: 'addmember',
-            element: <AddMember text='member' />,
+            element: <AddMember text='member' details={memberDetails} />,
           },
           {
             path: 'moreInfo',
@@ -36,7 +38,7 @@ const router = createBrowserRouter([
           },
           {
             path: 'addchildren',
-            element: <AddMember text='children' />,
+            element: <AddMember text='children' details={students} />,
           },
         ],
       },
@@ -61,9 +63,24 @@ const router = createBrowserRouter([
     element: <Register />,
     errorElement: <Error />,
   },
+  {
+    path: '/getData',
+    errorElement: <Error />,
+  },
 ]);
 
 function App() {
+  const [data, setData] = useState('');
+
+  const getData = async () => {
+    const response = await axios.get('https://localhost:500/getData');
+    setData(response.data);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <>
       <RouterProvider router={router}></RouterProvider>

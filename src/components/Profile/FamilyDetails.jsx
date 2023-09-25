@@ -1,26 +1,33 @@
-import P1 from '../../images/P1.jpeg';
 import { Link } from 'react-router-dom';
-
-const memberDetails = [
-  {
-    id: 1,
-    image: P1,
-    name: 'Saroj Silwal',
-    age: 35,
-    sex: 'male',
-    address: '11 Joy Street Ascot Park 5403 SA',
-    relation: 'father',
-    contact: '041238765',
-  },
-];
+import { memberDetails } from '../data.js';
+// const memberDetails = [
+//   {
+//     id: 1,
+//     image: P1,
+//     name: 'Saroj Silwal',
+//     age: 35,
+//     sex: 'male',
+//     address: '11 Joy Street Ascot Park 5403 SA',
+//     relation: 'father',
+//     contact: '041238765',
+//   },
+// ];
 function FamilyDetails() {
   return (
     <>
       <section className='section-center '>
         <h3 className='profile-title'>Family</h3>
         {memberDetails.map((member) => {
-          const { id, image, name, age, sex, address, relation, contact } =
-            member;
+          const {
+            id,
+            image,
+            firstName,
+            lastName,
+            age,
+            address,
+            relation,
+            contact,
+          } = member;
           return (
             <div className='container' key={id}>
               <div className='family-photo'>
@@ -30,16 +37,16 @@ function FamilyDetails() {
                 <table>
                   <tr>
                     <th>Name</th>
-                    <td>{name}</td>
+                    <td>{firstName + ' ' + lastName}</td>
                   </tr>
                   <tr>
                     <th>Age</th>
                     <td>{age} years</td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <th>Sex</th>
                     <td>{sex}</td>
-                  </tr>
+                  </tr> */}
                   <tr>
                     <th>Address</th>
                     <td>{address}</td>

@@ -1,7 +1,8 @@
 import axios from 'axios';
+const productionUrl = 'http://localhost:5000/';
 
-const productionUrl = '';
-
-export const customFetch = axios.create({
+const customFetch = axios.create({
   baseURL: productionUrl,
 });
+
+export default customFetch;

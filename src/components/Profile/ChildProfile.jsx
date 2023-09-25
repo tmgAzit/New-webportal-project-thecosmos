@@ -1,17 +1,16 @@
-import aadhya from '../../images/child1.jpeg';
-
-const students = [
-  {
-    id: 1,
-    image: aadhya,
-    name: 'Aadhya Silwal',
-    age: 4.8,
-    sex: 'Female',
-    address: '11 Joy Street Ascot Park 5403 SA',
-    parents: 'Saroj Silwal',
-    contact: '041238765',
-  },
-];
+import { students } from '../data.js';
+// const students = [
+//   {
+//     id: 1,
+//     image: aadhya,
+//     name: 'Aadhya Silwal',
+//     age: 4.8,
+//     sex: 'Female',
+//     address: '11 Joy Street Ascot Park 5403 SA',
+//     parents: 'Saroj Silwal',
+//     contact: '041238765',
+//   },
+// ];
 function ChildProfile() {
   return (
     <>
@@ -35,10 +34,10 @@ function ChildProfile() {
                     <th>Age</th>
                     <td>{age} years</td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <th>Sex</th>
                     <td>{sex}</td>
-                  </tr>
+                  </tr> */}
                   <tr>
                     <th>Address</th>
                     <td>{address}</td>

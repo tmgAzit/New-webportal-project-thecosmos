@@ -5,7 +5,7 @@ function Header() {
       <div className='header-content'>
         <h4 className='welcome'>Welcome, Mr Ajit </h4>
         <Link to='/login' className='btn'>
-          sign in / sign out
+          logout
         </Link>
       </div>
     </header>

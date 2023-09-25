@@ -5,6 +5,7 @@ function Profile() {
     <>
       <Educator />
       {/* <Student /> */}
+
       <Outlet />
     </>
   );
